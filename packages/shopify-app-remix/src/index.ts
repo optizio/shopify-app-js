@@ -72,8 +72,6 @@ export function shopifyApp<
   const config = deriveConfig<Storage>(appConfig, api.config);
   const logger = overrideLogger(api.logger);
 
-  installGlobalResponseHeaders(config.isEmbeddedApp);
-
   if (appConfig.webhooks) {
     api.webhooks.addHandlers(appConfig.webhooks);
   }
